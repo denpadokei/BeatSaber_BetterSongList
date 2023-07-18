@@ -14,7 +14,7 @@ namespace BetterSongList.HarmonyPatches.UI {
 		static GameObject[] buttons = null;
 		static void Prefix(bool ____isInitialized, TableView ____tableView, LevelCollectionTableView __instance) {
 			if(!____isInitialized)
-				SharedCoroutineStarter.instance.StartCoroutine(DoTheFunny(____tableView, __instance.transform));
+				SharedCoroutineStarter.Instance.StartCoroutine(DoTheFunny(____tableView, __instance.transform));
 
 			UpdateState();
 		}

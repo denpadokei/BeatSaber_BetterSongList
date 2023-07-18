@@ -186,7 +186,7 @@ namespace BetterSongList.UI {
 			if(text != null)
 				warnings.Enqueue(text);
 			if(!warningLoadInProgress)
-				SharedCoroutineStarter.instance.StartCoroutine(_ShowError());
+				SharedCoroutineStarter.Instance.StartCoroutine(_ShowError());
 		}
 
 		[UIAction("PossiblyShowNextWarning")] void PossiblyShowNextWarning() => ShowErrorASAP();
@@ -257,7 +257,7 @@ namespace BetterSongList.UI {
 
 			SetSortDirection(Config.Instance.SortAsc, false);
 
-			SharedCoroutineStarter.instance.StartCoroutine(PossiblyDrawUserAttentionToSettingsButton());
+			SharedCoroutineStarter.Instance.StartCoroutine(PossiblyDrawUserAttentionToSettingsButton());
 		}
 
 		IEnumerator PossiblyDrawUserAttentionToSettingsButton() {

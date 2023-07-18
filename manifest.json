@@ -4,9 +4,9 @@
     "author": "Kinsi55",
     "version": "0.3.6",
     "description": "Adds Various improvements to the Basegame Map list like Filters, a persisted state and much more",
-    "gameVersion": "1.24.0",
+    "gameVersion": "1.31.0",
     "dependsOn": {
-        "BSIPA": "^4.2.0",
+        "BSIPA": "^4.3.0",
         "SongCore": "^3.5.0",
         "BeatSaberMarkupLanguage": "^1.5.4"
     },
@@ -19,6 +19,6 @@
     "conflictsWith": {
         "SongBrowser": ">=0.0.0",
         "BeatSaberPlaylistsLib": "<1.6.0",
-        "SongDetailsCache": "<1.2.2"
+        "SongDetailsCache": "<1.2.3"
     }
 }

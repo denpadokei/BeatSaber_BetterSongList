@@ -9,12 +9,12 @@ namespace BetterSongList.HarmonyPatches.UI {
 	static class BottomUI {
 		[HarmonyPriority(int.MaxValue)]
 		static void Prefix(LevelCollectionNavigationController __instance, bool firstActivation) {
-			SharedCoroutineStarter.instance.StartCoroutine(FixPos(__instance.transform));
+			SharedCoroutineStarter.Instance.StartCoroutine(FixPos(__instance.transform));
 
 			if(!firstActivation)
 				return;
 
-			SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform));
+			SharedCoroutineStarter.Instance.StartCoroutine(InitDelayed(__instance.transform));
 		}
 
 		// Levelnav is kinda too far down in 1.18

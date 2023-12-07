@@ -1,10 +1,10 @@
 ﻿using HarmonyLib;
 
 namespace BetterSongList.HarmonyPatches {
-	[HarmonyPatch(typeof(LevelFilterParams), "filterByOwned", MethodType.Getter)]
+	[HarmonyPatch(typeof(SearchFilterParamsViewController), nameof(SearchFilterParamsViewController.Refresh))]
 	static class PresetFilter {
-		static void Postfix(ref bool __result) {
-			__result = __result || Config.Instance.AutoFilterUnowned;
+		static void Prefix(ref LevelFilter filter) {
+			filter.songOwned = filter.songOwned || Config.Instance.AutoFilterUnowned;
 		}
 	}
 }

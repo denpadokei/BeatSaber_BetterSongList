@@ -68,7 +68,7 @@ namespace BetterSongList.HarmonyPatches.UI {
 				extraUI.transform.localPosition -= new Vector3(0, 1f);
 
 				fields = extraUI.GetComponentsInChildren<CurvedTextMeshPro>();
-				SharedCoroutineStarter.Instance.StartCoroutine(ProcessFields());
+				SharedCoroutineStarter.instance.StartCoroutine(ProcessFields());
 			}
 
 			lastInstance = __instance;

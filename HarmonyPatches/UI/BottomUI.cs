@@ -9,12 +9,12 @@ namespace BetterSongList.HarmonyPatches.UI {
 	static class BottomUI {
 		[HarmonyPriority(int.MaxValue)]
 		static void Prefix(LevelCollectionNavigationController __instance, bool firstActivation) {
-			SharedCoroutineStarter.Instance.StartCoroutine(FixPos(__instance.transform));
+			SharedCoroutineStarter.instance.StartCoroutine(FixPos(__instance.transform));
 
 			if(!firstActivation)
 				return;
 
-			SharedCoroutineStarter.Instance.StartCoroutine(InitDelayed(__instance.transform));
+			SharedCoroutineStarter.instance.StartCoroutine(InitDelayed(__instance.transform));
 		}
 
 		static void Postfix(ref bool ____hideDetailViewController) {

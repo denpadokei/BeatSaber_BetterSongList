@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using UnityEngine.ResourceManagement.Util;
+﻿using UnityEngine;
 
-internal class SharedCoroutineStarter : ComponentSingleton<SharedCoroutineStarter>
-{
+public class SharedCoroutineStarter : MonoBehaviour {
+	static MonoBehaviour _instance = null;
+	public static MonoBehaviour instance => _instance ??= new GameObject().AddComponent<SharedCoroutineStarter>();
+
+	void Awake() {
+		GameObject.DontDestroyOnLoad(gameObject);
+	}
 }
